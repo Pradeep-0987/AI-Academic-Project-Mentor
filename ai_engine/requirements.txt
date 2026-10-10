@@ -1,7 +1,11 @@
-
 google-genai
 pydantic
 python-dotenv
 pytest
 langgraph
 langchain-core
+fastapi
+uvicorn[standard]
+python-multipart
+pandas
+openpyxl

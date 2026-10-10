@@ -200,3 +200,108 @@ h1 span { color: var(--purple); }
   .quality-pill { flex-shrink: 1; }
   .privacy-note { align-items: flex-start; line-height: 1.6; }
 }
+
+/* Conversational mentoring and milestone management */
+.mentor-layout { display: grid; grid-template-columns: minmax(235px, .75fr) minmax(0, 1.5fr); gap: 16px; align-items: start; }
+.mentor-projects-panel, .mentor-main-column { min-width: 0; }
+.mentor-projects-panel { padding: 17px; border: 1px solid var(--border); border-radius: 14px; background: var(--panel); }
+.mentor-refresh { width: 100%; margin-bottom: 12px; }
+.mentor-project-list { display: grid; gap: 8px; margin-bottom: 18px; }
+.mentor-project-option { display: block; width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 9px; color: var(--text); background: #0d1220; text-align: left; }
+.mentor-project-option.selected { border-color: #8e7be8; background: #211d37; }
+.mentor-project-option strong, .mentor-project-option span { display: block; overflow-wrap: anywhere; }
+.mentor-project-option strong { font-size: 11px; }
+.mentor-project-option span { margin-top: 6px; color: var(--muted); font-size: 10px; }
+.mentor-create-form { display: grid; gap: 9px; padding-top: 15px; border-top: 1px solid var(--border); }
+.mentor-create-form h3 { display: flex; align-items: center; gap: 7px; margin: 0 0 5px; font-size: 12px; }
+.mentor-create-form label { color: #dce2f0; font-size: 11px; font-weight: 600; }
+.mentor-create-form input, .mentor-create-form textarea, .mentor-chat-form textarea, .milestone-add-form input { width: 100%; min-width: 0; padding: 10px; border: 1px solid #30394e; border-radius: 8px; outline: none; color: var(--text); background: #0d1220; font: inherit; font-size: 11px; }
+.mentor-create-form textarea, .mentor-chat-form textarea { resize: vertical; line-height: 1.6; }
+.mentor-create-form .primary-button { margin-top: 3px; }
+.mentor-main-column { display: grid; gap: 14px; }
+.mentor-chat-card { padding: 17px; }
+.mentor-messages { display: flex; flex-direction: column; gap: 12px; min-height: 280px; max-height: 470px; overflow-y: auto; padding: 12px 2px; }
+.mentor-message { max-width: 92%; padding: 11px 13px; border: 1px solid #2b3549; border-radius: 12px; background: #0d1220; }
+.mentor-message.user { align-self: flex-end; border-color: #514477; background: #211d37; }
+.mentor-message > span { display: block; margin-bottom: 6px; color: var(--cyan); font-size: 9px; font-weight: 700; letter-spacing: 1px; }
+.mentor-message.user > span { color: #c5b8ff; }
+.mentor-message p { margin: 0; color: #dce2f0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 11px; line-height: 1.8; }
+.mentor-chat-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 10px; padding-top: 13px; border-top: 1px solid var(--border); }
+.mentor-chat-form .primary-button { margin: 0; min-height: 42px; }
+.milestone-add-form { display: grid; grid-template-columns: minmax(0, 1fr) 135px auto; gap: 8px; margin: 15px 0; }
+.milestone-add-form .secondary-button { min-height: 38px; }
+.milestone-progress { display: flex; justify-content: space-between; margin: 15px 0 8px; color: var(--muted); font-size: 10px; }
+.milestone-progress strong { color: #a99aff; }
+.progress-track { height: 6px; overflow: hidden; border-radius: 10px; background: #272d3c; }
+.progress-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #9d8aff, #76e4ee); transition: width .2s; }
+.milestone-list { display: grid; gap: 0; }
+.milestone-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 0; border-bottom: 1px solid #252c3d; }
+.milestone-copy { min-width: 0; }
+.milestone-copy strong, .milestone-copy span { display: block; overflow-wrap: anywhere; }
+.milestone-copy strong { font-size: 11px; }
+.milestone-copy span { margin-top: 5px; color: var(--muted); font-size: 10px; }
+.milestone-row select { max-width: 125px; padding: 7px; border: 1px solid #30394e; border-radius: 7px; color: var(--text); background: #0d1220; font-size: 10px; }
+.muted-copy { color: var(--muted); font-size: 11px; line-height: 1.7; }
+@media (max-width: 900px) { .mentor-layout { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .milestone-add-form { grid-template-columns: 1fr; } .mentor-chat-form { grid-template-columns: 1fr; } .mentor-chat-form .primary-button { justify-self: end; } .milestone-row { align-items: flex-start; flex-direction: column; } }
+
+
+/* Outcome 3: documentation preview and Outcome 4: faculty dashboard */
+.document-preview {
+  margin-top: 18px;
+  padding: 18px;
+  max-height: 560px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: #dce2f0;
+  background: #0d1220;
+  font: 12px/1.8 "DM Sans", sans-serif;
+}
+.faculty-project {
+  padding: 17px 0;
+  border-top: 1px solid var(--border);
+}
+.faculty-project-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+.faculty-project-head h3 { margin: 0; font-size: 13px; }
+.faculty-project-head p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.health-pill {
+  flex-shrink: 0;
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 9px;
+  text-transform: capitalize;
+  color: #b5f0d2;
+  background: #163329;
+}
+.health-pill.needs_attention { color: #ffd19c; background: #38291b; }
+.health-pill.not_started { color: #c4cce0; background: #252c3c; }
+.health-pill.completed { color: #a7e9ca; background: #163329; }
+.progress-track {
+  height: 7px;
+  margin-top: 15px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #252d40;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9d8aff, #76e4ee);
+}
+.faculty-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  margin-top: 9px;
+  color: #aab5ca;
+  font-size: 10px;
+}
+.faculty-summary { color: #d4dbea; font-size: 11px; line-height: 1.7; }
