@@ -1,0 +1,10 @@
+/* App-level specific overrides if needed (Core tokens are in index.css) */
+.desktop-only {
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .desktop-only {
+    display: none;
+  }
+}
